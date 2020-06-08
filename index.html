@@ -60,7 +60,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Most orders have under 10 items</h4>
-                            <p class="text-black-50 mb-0">During my exploratory analysis I binned orders by number of items purchased and saw that most orders have 10 items. This leaves plenty of room for up sizing an order through recommendations.</p>
+                            <p class="text-black-50 mb-0">During my exploratory analysis I binned orders by number of items purchased and saw that most orders have 10 items. Many orders are for fewer items, which leaves plenty of room for up sizing on small orders through recommendations.</p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Most orders have under 10 items</h4>
+                                    <h4 class="text-white">Most shoppers return one week later</h4>
                                     <p class="mb-0 text-white-50">I looked at the number of days for a given customer to make a new purchase and saw a sharp peak at 7 days. This could serve as a period over which to send personalized coupons. It could also serve as a warning for when customers are less likely to come back at all. For example, if a customer hasn’t returned in 10 days it might be worth exerting extra effort to get them to consider shopping with Instacart again.</p>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
@@ -86,7 +86,7 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Most shoppers return one week later</h4>
+                                    <h4 class="text-white">Majority of orders are reorders</h4>
                                     <p class="mb-0 text-white-50">Finally, I compared the number of times an item is reordered to the number of times an item is bought for the first time. I found that the majority of items purchased have been purchased before. This means that if customers purchase a new item as a result of a recommendation, that new purchase has the potential to be bought again in the future, boosting future profits.</p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
                                 </div>
@@ -106,7 +106,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Compared multiple recommender models</h4>
-                            <p class="text-black-50 mb-0">I used LightFM to implement two recommender models. The first model only used collaborative filtering. This technique finds users that rate items similarly to suggest items that a given user has not tried. I used the number of purchases for a given item as a proxy for rating. The second model also used collaborative filtering in combination with content based filtering. Content based filtering finds items with similar features for recommendations. The features used were department and aisle. The collaborative filtering alone obtained a higher mean AUC score of 0.95 across users as opposed to an AUC of 0.8, and so would be the more useful model for future use.</p>
+                            <p class="text-black-50 mb-0">I used LightFM to implement two recommender models. The first model only used collaborative filtering. This technique finds users that rate items similarly to suggest items that a given user has not tried. I used the number of purchases for a given item as a proxy for rating. The second model also used collaborative filtering in combination with content based filtering. Content based filtering finds items with similar features for recommendations. The features used were department and aisle. he collaborative filtering alone obtained a higher mean area under the curve (AUC) of 0.95 across users as opposed to an AUC of 0.8, and so would be the more useful model for future use. AUC is a useful way to simultaneously account for both accuracy and precision of a classification model. This is important because we can obtain high accuracy by always recommending something that most users will want. This would completely discount the minority of false negatives, making churn more likely in a subgroup of shoppers.</p>
                         </div>
                     </div>
                 </div>
@@ -120,6 +120,7 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h2 class="text-white mb-4">Example recommendations</h2>
+                        <p class="text-white-50">Here is an example of what my model serves. For each given user some highly rated items are listed along with some suggested items. These suggestions could be used during a shopping experience to elicit an upsale. They could also be used to email coupons for the purpose of increasing the number and size of sales and reducing churn.</p>
                         <!-- <p class="text-white-50"></p> -->
                     </div>
                 </div>
